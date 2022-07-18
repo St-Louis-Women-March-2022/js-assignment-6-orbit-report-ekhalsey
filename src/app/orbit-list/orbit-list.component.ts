@@ -9,8 +9,6 @@ import { Satellite } from '../satellite';
 
 export class OrbitListComponent implements OnInit {
 
-	headers = ['name','type', 'operational', 'orbitType', 'launchDate'];
-
   @Input() satellites: Satellite[];
   constructor() { }
 

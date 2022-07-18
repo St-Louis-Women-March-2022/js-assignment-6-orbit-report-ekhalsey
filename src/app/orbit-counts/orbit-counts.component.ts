@@ -8,6 +8,8 @@ import { Satellite } from '../satellite';
 })
 export class OrbitCountsComponent implements OnInit {
 
+	count: number = 0;
+
 	@Input() satellites: Satellite[];
 
   constructor() { }
@@ -25,6 +27,15 @@ export class OrbitCountsComponent implements OnInit {
 	  }
 	}
 	return count;
+ }
+
+
+ countRows(arrayOfSatellites : object[]) {
+	 let totalSatellites = 0;
+	 for(let i = 0; i < arrayOfSatellites.length; i++){
+		totalSatellites++;
+	 }
+	 return totalSatellites;
  }
 
 
